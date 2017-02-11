@@ -25,7 +25,14 @@ function doWhileLoop(array) {
     }
 
     do {
-      array.pop();//should I use destructive or non-destructive?
+      array.pop();
+      /** should I use destructive or non-destructive?
+      Post-Solution: use slice as well
+      do {
+      array = array.slice(1)
+      } while (array.length > 0 && maybeTrue())
+
+      return array**/
     } while (array.length > 0 && maybeTrue());//while array has elements and maybeTrue returns only true
 
     return array;
